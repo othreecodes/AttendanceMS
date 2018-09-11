@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.StatusBar?>
+
+<StackPane fx:id="root" prefHeight="591.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.MainController">
+    <children>
+        <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" />
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url(&quot;..\ntg\image.png&quot;); -fx-background-position: center; -fx-background-size: cover;">
+            <children>
+                <MenuBar layoutX="7.0" layoutY="2.0" style="-fx-background-color: white; -fx-padding: 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                        <Menu text="File">
+                            <items>
+                                <MenuItem onAction="#close" text="Close ">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    <graphic>
+                                        <MaterialIconView fill="RED" glyphName="CLOSE" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </Menu>
+                        <Menu text="Student">
+                            <items>
+                                <MenuItem fx:id="registerItem" onAction="#registerStudent" text="Register">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="PERSON" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem fx:id="coursesReg" onAction="#coursesReg" text="Courses Registration">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="SWAP_HORIZ" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" visible="false" />
+                                <MenuItem fx:id="resultItem" mnemonicParsing="false" onAction="#setResults" text="Result" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00bcd4" glyphName="LIBRARY_BOOKS" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </Menu>
+                        <Menu fx:id="reportMenu" text="Report">
+                            <items>
+                                <MenuItem onAction="#studentList" text="Student List">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="LIST" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem onAction="#nonGradStudList" text="Non-Graduating Students" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="GROUP" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem onAction="#printTranscript" text="Transcript" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="DESCRIPTION" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" visible="false" />
+                                <MenuItem text="Graduating Students" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="SCHOOL" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem text="Qualified Graduates" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="CHECK" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem text="FNGs" visible="false">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="WARNING" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu text="Setup">
+                            <items>
+                                <MenuItem fx:id="sessItem" onAction="#showDialog" text="Session Configuration">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="SETTINGS" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <MenuItem fx:id="coursesItem" onAction="#registerCourses" text="Courses">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="SUBJECT" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem onAction="#changePassword" text="Password">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="LOCK" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem fx:id="usersItem" onAction="#createUser" text="Users">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="PERSON_ADD" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu text="Help">
+                            <items>
+                                <MenuItem text="Help">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="HELP" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Send Admin a Message">
+                           <graphic>
+                              <MaterialIconView fill="#00BCD4" glyphName="MESSAGE" size="20" />
+                           </graphic>
+                        </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem text="About">
+                                    <graphic>
+                                        <MaterialIconView fill="#00BCD4" glyphName="INFO" size="20" />
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <StatusBar fx:id="status" layoutY="562.0" text="(c) Software by Othree Inc" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <ToolBar layoutX="6.0" layoutY="25.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <items>
+                        <JFXButton fx:id="regStudButton" onAction="#registerStudent">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="PERSON" size="30" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Student Record">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="10.0" onAction="#coursesReg">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="SWAP_HORIZ" size="30" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Courses Registration">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="compResultButton" layoutX="10.0" layoutY="10.0" onAction="#setResults" visible="false">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="LIBRARY_BOOKS" size="30" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Compute Result">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <Separator layoutX="310.0" layoutY="10.0" prefHeight="38.0" prefWidth="0.0" />
+                        <JFXButton layoutX="10.0" layoutY="10.0" onAction="#printTranscript" visible="false">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="DESCRIPTION" size="30" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Generate Transcript">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="sessButton" layoutX="10.0" layoutY="10.0" onAction="#showDialog">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="SETTINGS" size="30" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Session Configuration">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="gradButton" layoutX="210.0" layoutY="10.0">
+                            <graphic>
+                                <MaterialIconView fill="#00BCD4" glyphName="SCHOOL" size="30" visible="false" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="List of Graduating Students">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <Separator prefHeight="38.0" prefWidth="0.0" />
+                  <JFXButton layoutX="330.0" layoutY="10.0" onAction="#attendance">
+                     <tooltip>
+                        <Tooltip text="Start Attendance Register">
+                           <font>
+                              <Font name="FontAwesome Regular" size="16.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <graphic>
+                        <MaterialIconView fill="#00BCD4" glyphName="CREATE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                    </items>
+                </ToolBar>
+            </children>
+        </AnchorPane>
+      
+        <JFXDialog fx:id="dialog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400">
+            
+            
+            <JFXDialogLayout fx:id="dialogLayout">
+                <heading>
+                    <Label fx:id="dialogHeading" alignment="CENTER" contentDisplay="CENTER" text="SESSION CONFIGURATION" textAlignment="CENTER">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                </heading>
+                <body>
+                    
+                </body>
+                
+                <actions>
+                    <JFXButton fx:id="acceptButton" styleClass="dialog-accept">CLOSE
+                    </JFXButton>
+                </actions>
+            </JFXDialogLayout>
+         
+        </JFXDialog>
+
+    </children>
+   
+   
+  
+
+</StackPane>

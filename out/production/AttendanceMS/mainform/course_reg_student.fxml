@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root" prefHeight="647.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.CourseRegController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="456.0" style="-fx-border-color: white; -fx-border-width: 4;" styleClass="button-raised">
+         <children>
+            <HBox layoutX="12.0" layoutY="179.0" prefHeight="222.0" prefWidth="432.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-text-fill: white;" text="Available Courses">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <JFXListView fx:id="available" minHeight="200.0" prefHeight="200.0" prefWidth="248.0" showTooltip="true" />
+                        <JFXButton fx:id="addButton" onAction="#addRegCourse" prefHeight="40.0" prefWidth="112.0" style="-fx-background-color: grey;" text="Add course">
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <JFXButton fx:id="sendButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="30.0" minHeight="35.0" onAction="#addCourse" prefHeight="30.0" style="-fx-background-color: white;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView glyphName="CHEVRON_RIGHT" size="50" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="recieveButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="30.0" minHeight="35.0" onAction="#removeCourse" prefHeight="30.0" style="-fx-background-color: white;" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView glyphName="CHEVRON_LEFT" size="50" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="totalUnitsField" depthTest="DISABLE" editable="false" labelFloat="true" promptText="total units" style="-fx-unfocus-color: white;" text="0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-text-fill: white;" text="Registered Courses" />
+                        <JFXListView fx:id="chosen" minHeight="200.0" prefHeight="200.0" prefWidth="248.0" showTooltip="true" />
+                        <JFXButton fx:id="resetButton" onAction="#resetReg" style="-fx-background-color: grey;" text="Reset Course">
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <GridPane layoutX="14.0" layoutY="14.0" prefHeight="161.0" prefWidth="470.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Matric Number:" />
+                  <Label text="Student Name:" GridPane.rowIndex="1" />
+                  <Label text="Mode of Entry:" GridPane.rowIndex="2" />
+                  <Label text="Current Level:" GridPane.rowIndex="3" />
+                  <JFXComboBox fx:id="matricBox" prefHeight="25.0" prefWidth="202.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="8.0" right="8.0" />
+                     </GridPane.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="nameField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="moeField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="levelField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <JFXTextArea fx:id="detailsArea" editable="false" layoutX="24.0" layoutY="450.0" maxWidth="492.0" minWidth="416.0" prefHeight="122.0" prefWidth="440.0" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <HBox alignment="BASELINE_LEFT" layoutX="26.0" layoutY="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="573.2">
+               <children>
+                  <JFXButton fx:id="saveButton" onAction="#saveCourses" ripplerFill="WHITE" style="-fx-background-color: GREEN; -fx-background-radius: 0;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SAVE" size="40" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#closeForm" ripplerFill="WHITE" style="-fx-background-color: RED; -fx-background-radius: 0;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" size="40" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Label fx:id="regLabel" style="-fx-font-size: 18;" text="unregistered" textFill="RED">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

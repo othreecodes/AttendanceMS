@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.sessionController">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="651.0" style="-fx-background-color: white;">
+            <children>
+                <ButtonBar layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="640.0" AnchorPane.rightAnchor="18.0">
+                    <buttons>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="-Infinity" minWidth="-Infinity" onAction="#sessionCreate" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #00bcd4; -fx-text-fill: white;" text="Create Session" textAlignment="CENTER" />
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="515.0" layoutY="18.0" maxHeight="-Infinity" minWidth="-Infinity" onAction="#setSess" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #00bcd4; -fx-text-fill: white;" text="Set Current Session" textAlignment="CENTER" />
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="515.0" layoutY="18.0" maxHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #00bcd4; -fx-text-fill: white;" text="Close Session" textAlignment="CENTER" />
+                    </buttons>
+                </ButtonBar>
+            <AnchorPane layoutX="18.0" layoutY="69.0" prefHeight="322.0" prefWidth="680.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXTreeTableView fx:id="sessionTable" editable="true" layoutX="30.0" prefHeight="319.0" prefWidth="640.0" showRoot="false" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <JFXTreeTableColumn fx:id="idColumn" prefWidth="50.0" resizable="false" text="Id" />
+                        <JFXTreeTableColumn fx:id="codeColumn" prefWidth="120.0" resizable="false" text="Session Code" />
+                        <JFXTreeTableColumn fx:id="yearColumn" prefWidth="140.0" resizable="false" text="Session" />
+                        <JFXTreeTableColumn fx:id="statusColumn" prefWidth="70.0" resizable="false" text="Status" />
+                        <JFXTreeTableColumn fx:id="currentColumn" prefWidth="133" resizable="false" text="Current Session" />
+                        <JFXTreeTableColumn fx:id="closedColumn" prefWidth="110.0" resizable="false" text="Session Closed" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </JFXTreeTableView>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

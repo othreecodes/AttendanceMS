@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.AttendanceController">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="651.0" style="-fx-background-color: white;">
+            <children>
+                <ButtonBar layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="640.0" AnchorPane.rightAnchor="18.0">
+               <buttons>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="634.0" text="PLACE YOUR FINGER ON THE READER" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+               </buttons>
+                </ButtonBar>
+            <AnchorPane layoutX="18.0" layoutY="69.0" prefHeight="322.0" prefWidth="680.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox layoutX="117.0" layoutY="61.0" prefHeight="200.0" prefWidth="434.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="107.0">
+                     <children>
+                        <Label fx:id="isValid" alignment="CENTER" prefHeight="40.0" prefWidth="434.0" text="is valid" textAlignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="matric" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="434.0" text="Matric Number" textAlignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name" alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="434.0" text="Full name" textAlignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="90.0" prefHeight="40.0" prefWidth="434.0" text="Info" textAlignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+            </children>
+        </AnchorPane>
+        <JFXSnackbar fx:id="snackbar" prefWidth="500" />
+    </children>
+</StackPane>

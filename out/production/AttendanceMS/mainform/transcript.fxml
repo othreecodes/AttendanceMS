@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.TranscriptController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="288.0" prefWidth="426.0" style="-fx-background-color: white;" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@jfoenix-components.css" />
+          </stylesheets>
+         <children>
+            <VBox alignment="CENTER" layoutX="163.0" layoutY="14.0" prefHeight="273.0" prefWidth="100.0" spacing="50.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <JFXComboBox fx:id="levelBox" prefHeight="25.0" prefWidth="204.0" promptText="Select Level" />
+                  <JFXComboBox fx:id="matricBox" prefHeight="25.0" prefWidth="204.0" promptText="Select Matric No" />
+                  <JFXButton onAction="#generate" style="-fx-background-radius: 0; -fx-font-size: 20; -fx-font-weight: bold;" styleClass="button-raised" text="GENERATE" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

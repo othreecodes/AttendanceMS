@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="582.0" prefWidth="605.0" style="-fx-background-color: black; -fx-border-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntg.layoutController">
+   <children>
+      <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;">
+         <children>
+            <JFXToolbar layoutX="1.0" layoutY="-1.0" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <center>
+                  <Text fill="#00bcd4" strokeType="OUTSIDE" strokeWidth="0.0" text="   USER LOGIN" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="FontAwesome Regular" size="30.0" />
+                     </font>
+                  </Text>
+               </center>
+               <right>
+                  <JFXButton onAction="#close" ripplerFill="#00bcd4" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <MaterialIconView fill="#00bcd4" glyphName="CLOSE" size="20" />
+                     </graphic>
+                  </JFXButton>
+               </right>
+            </JFXToolbar>
+            <HBox alignment="BOTTOM_CENTER" layoutX="43.0" layoutY="153.0" prefHeight="45.0" prefWidth="303.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <MaterialIconView fill="#00bcd4" glyphName="PERSON" size="45" wrappingWidth="20.0" />
+                  <JFXTextField fx:id="usernameText" focusColor="BLACK" labelFloat="true" maxWidth="270.0" minWidth="211.0" prefHeight="44.0" prefWidth="270.0" promptText="username" style="-fx-text-fill: white;" unFocusColor="#00bcd4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="20.0" />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="64.0" layoutY="363.0" onAction="#doLogin" prefHeight="60.0" prefWidth="272.0" ripplerFill="#00bcd4" style="-fx-background-color: white;" text="LOG IN" textFill="#00bcd4" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </JFXButton>
+            <HBox alignment="BOTTOM_CENTER" layoutX="49.0" layoutY="236.0" prefHeight="45.0" prefWidth="303.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <MaterialIconView fill="#00bcd4" glyphName="LOCK" size="45" wrappingWidth="20.0" />
+                  <JFXPasswordField fx:id="passwordText" focusColor="BLACK" labelFloat="true" maxWidth="270.0" minWidth="211.0" prefHeight="44.0" prefWidth="270.0" promptText="password" style="-fx-text-fill: inherit; -fx-highlight-fill: null; -fx-highlight-text-fill: null;" unFocusColor="#00bcd4">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

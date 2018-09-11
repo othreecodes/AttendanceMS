@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="604.0" prefWidth="593.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.registerController">
+    <children>
+        <HBox layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+            <children>
+                <JFXTextField fx:id="searchfield" labelFloat="true" maxWidth="477.0" minWidth="530.0" prefHeight="31.0" prefWidth="477.0" promptText="search">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </JFXTextField>
+                <JFXButton style="-fx-background-color: white;" visible="false">
+                    <graphic>
+                        <MaterialIconView glyphName="SEARCH" size="20" />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </HBox>
+        <JFXTabPane layoutX="33.0" layoutY="75.0" prefHeight="0.0" prefWidth="525.0" style="-fx-background-insets: 12; -fx-border-style: solid; -fx-border-color: grey; -fx-border-width: 2;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+            <tabs>
+                <Tab text="Biodata">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Matric number:">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Surname:" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="55.0" text="Firstname:" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="92.0" text="Middlename:" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="129.0" text="Sex:" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="166.0" text="Date of Birth:" GridPane.rowIndex="5">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="203.0" text="Residential Address:" GridPane.rowIndex="6">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="240.0" text="Phone number:" GridPane.rowIndex="7">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="277.0" text="Level of study:" GridPane.rowIndex="8">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="314.0" text="Next of kin:" GridPane.rowIndex="9">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="350.0" text="Next of kin address:" GridPane.rowIndex="10">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <JFXTextField fx:id="matric" disable="true" GridPane.columnIndex="1" />
+                                        <JFXTextField fx:id="surname" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <JFXTextField fx:id="firstname" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <JFXTextField fx:id="middlename" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <JFXTextField fx:id="phone" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                        <JFXTextField fx:id="nextofkin" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                        <JFXDatePicker fx:id="dob" defaultColor="BLACK" disable="true" editable="false" prefHeight="32.0" prefWidth="266.0" promptText="DOB" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
+                                        <JFXComboBox fx:id="sex" disable="true" prefHeight="25.0" prefWidth="264.0" promptText="--Choose sex--" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                                            <GridPane.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </GridPane.margin>
+                                        </JFXComboBox>
+                                        <JFXComboBox fx:id="levelofstudy" disable="true" prefHeight="25.0" prefWidth="264.0" promptText="--Choose Level--" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+                                            <GridPane.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </GridPane.margin>
+                                        </JFXComboBox>
+                                        <JFXTextArea fx:id="resaddress" disable="true" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                        <JFXTextArea fx:id="nextofkinaddress" disable="true" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Academics">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Year of Entry:">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="25.0" text="Mode of Entry:" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="68.0" text="Jamb UME Score:" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="111.0" text="Previous school attended:" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="154.0" text="Qualification obtained:" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="197.0" text="Current total units:" GridPane.rowIndex="5">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="240.0" text="Current units passed:" GridPane.rowIndex="6">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="283.0" text="Current accumulated WGP:" GridPane.rowIndex="7">
+                                            <font>
+                                                <Font name="FontAwesome Regular" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <JFXTextField fx:id="umescore" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <JFXTextField fx:id="prevschool" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <JFXTextField fx:id="currenttotal" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                        <JFXTextField fx:id="currentunits" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                        <JFXTextField fx:id="currentWGP" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                        <JFXComboBox fx:id="modeofentry" disable="true" prefHeight="25.0" prefWidth="242.0" promptText="--Choose Mode of Entry--" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <GridPane.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </GridPane.margin>
+                                        </JFXComboBox>
+                                        <JFXComboBox fx:id="yearofentry" disable="true" layoutX="272.0" layoutY="63.0" prefHeight="25.0" prefWidth="242.0" promptText="--Choose Year--" visibleRowCount="5" GridPane.columnIndex="1">
+                                            <GridPane.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </GridPane.margin>
+                                        </JFXComboBox>
+                                        <JFXComboBox fx:id="qualobtained" disable="true" layoutX="272.0" layoutY="63.0" prefHeight="25.0" prefWidth="242.0" promptText="--Choose Qualification--" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <GridPane.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </GridPane.margin>
+                                        </JFXComboBox>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Biometrics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="159.0" layoutY="14.0" style="-fx-border-color: black;">
+                           <children>
+                              <ImageView fx:id="fingerprint" fitHeight="249.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-insets: 2; -fx-border-size: 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <HBox layoutX="141.0" layoutY="286.0" spacing="20.0">
+                           <children>
+                              <JFXButton fx:id="enrollButton" buttonType="RAISED" disable="true" onAction="#startEnroll" prefWidth="80.0" style="-fx-background-color: white;" text="Enroll" />
+                              <JFXButton fx:id="verifyButton" buttonType="RAISED" onAction="#verifyFinger" prefWidth="80.0" style="-fx-background-color: white;" text="Verify" />
+                              <JFXButton fx:id="deleteButton" buttonType="RAISED" onAction="#deletePrint" prefWidth="80.0" style="-fx-background-color: white;" text="Delete" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="flabel" alignment="CENTER" layoutX="144.0" layoutY="352.0" prefHeight="17.0" prefWidth="282.0" text="Label" textAlignment="CENTER" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </JFXTabPane>
+        <HBox layoutX="13.0" layoutY="554.0" prefHeight="25.0" prefWidth="565.0" spacing="30.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+            <children>
+                <HBox spacing="5.0">
+                    <children>
+                        <JFXButton fx:id="newButton" buttonType="RAISED" onAction="#donew" prefWidth="80.0" style="-fx-background-color: white;" text="New" />
+                        <JFXButton fx:id="modifyButton" buttonType="RAISED" onAction="#modify" prefWidth="80.0" style="-fx-background-color: white;" text="Modify" />
+                        <JFXButton fx:id="cancelButton" buttonType="RAISED" cancelButton="true" disable="true" onAction="#doCancel" prefWidth="80.0" style="-fx-background-color: white;" text="Cancel" />
+                        <JFXButton fx:id="closeButton" buttonType="RAISED" prefWidth="80.0" style="-fx-background-color: white;" text="Close" />
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </HBox>
+                <HBox spacing="5.0">
+                    <children>
+                        <JFXButton fx:id="firstButton" buttonType="RAISED" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: white;">
+                            <graphic>
+                                <MaterialIconView boundsType="VISUAL" glyphName="SKIP_PREVIOUS" size="30" textOrigin="CENTER" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="First">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="backButton" buttonType="RAISED" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: white;">
+                            <graphic>
+                                <MaterialIconView boundsType="VISUAL" glyphName="CHEVRON_LEFT" size="30" textOrigin="CENTER" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Previous">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="nextButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: white;">
+                            <graphic>
+                                <MaterialIconView boundsType="VISUAL" glyphName="CHEVRON_RIGHT" size="30" textOrigin="CENTER" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Next">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="lastButton" buttonType="RAISED" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: white;">
+                            <graphic>
+                                <MaterialIconView boundsType="VISUAL" glyphName="SKIP_NEXT" size="30" textOrigin="CENTER" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Last">
+                                    <font>
+                                        <Font name="FontAwesome Regular" size="16.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <Label fx:id="datalabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="336.0" layoutY="45.0" prefHeight="17.0" prefWidth="198.0" text="no data available" textAlignment="RIGHT" AnchorPane.rightAnchor="15.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <JFXSnackbar fx:id="snackbar" prefWidth="500" />
+    </children>
+  
+</AnchorPane>

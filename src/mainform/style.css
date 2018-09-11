@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2016, 6:05:23 PM
+    Author     : OTHREE
+*/
+
+.jfx-text-field:error , .jfx-password-field:error , .jfx-text-area:error {
+	-fx-focus-color: #D34336;
+	-fx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .errorLabel, .jfx-password-field .errorLabel, .jfx-text-area .errorLabel{
+	-fx-text-fill : #D34336;
+	-fx-font-size: 0.75em;
+}
+.jfx-text-field .errorIcon, .jfx-password-field .errorIcon , .jfx-text-area .errorIcon{
+	-fx-text-fill : #D34336;
+	-fx-font-size: 1.0em;
+}
+
+.jfx-snackbar-content {
+	-fx-background-color: #323232;
+}
+
+.jfx-snackbar-toast {
+	-fx-text-fill: WHITE;	
+}
+
+.jfx-snackbar-action {
+	-fx-text-fill: #ff4081;	
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="700.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainform.coursesController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="23.0" maxHeight="-Infinity" prefHeight="291.0" prefWidth="700.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <JFXTreeTableView fx:id="table" editable="true" prefHeight="319.0" prefWidth="670.0" showRoot="false" tableMenuButtonVisible="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <columns>
+                  <JFXTreeTableColumn fx:id="codeColumn" prefWidth="100.0" resizable="false" text="Code" />
+                  <JFXTreeTableColumn fx:id="unitColumn" prefWidth="70.0" resizable="false" text="Unit" />
+                  <JFXTreeTableColumn fx:id="titleColumn" prefWidth="190.0" resizable="false" text="Title" />
+                  <JFXTreeTableColumn fx:id="modeColumn" prefWidth="70.0" resizable="false" text="Mode" />
+                  <JFXTreeTableColumn fx:id="prereqColumn" prefWidth="133" resizable="false" text="Prerequisite" />
+                  <JFXTreeTableColumn fx:id="levelColumn" prefWidth="110.0" resizable="false" text="Level" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="95.0" layoutY="350.0" prefHeight="319.0" prefWidth="670.0" styleClass="button-raised" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="350.0">
+         <children>
+            <TitledPane alignment="CENTER" collapsible="false" contentDisplay="CENTER" layoutX="16.0" layoutY="19.8" prefHeight="271.0" prefWidth="332.0" text="NEW COURSE" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="10.0">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: white;" styleClass="root">
+                     <children>
+                        <JFXTextField fx:id="nameText" onKeyPressed="#removeSpace" prefColumnCount="14" prefWidth="300.0" promptText="Course Code" styleClass="jfx-text-field">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="unitBox" prefHeight="30.0" prefWidth="297.0" promptText="Course Units">
+                           <VBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="titleText" maxWidth="301.0" minWidth="286.0" prefHeight="36.0" prefWidth="286.0" promptText="Course Title">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="jfx-text-field" />
+                              <String fx:value="text-field" />
+                           </styleClass>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="modeBox" prefHeight="30.0" prefWidth="300.0" promptText="Course Mode">
+                           <VBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="prereqBox" layoutX="21.0" layoutY="123.0" prefHeight="30.0" prefWidth="300.0" promptText="Prerequisite">
+                           <VBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="levelBox" layoutX="21.0" layoutY="123.0" prefHeight="30.0" prefWidth="300.0" promptText="Level">
+                           <VBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <VBox alignment="CENTER" layoutX="455.0" layoutY="18.0" prefHeight="295.0" prefWidth="176.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="newButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#createNew" prefWidth="90.0" style="-fx-background-color: white;" text="NEW" />
+                  <JFXButton fx:id="saveButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" onAction="#save" prefWidth="90.0" style="-fx-background-color: white;" text="SAVE" />
+                  <JFXButton fx:id="modifyButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="50.0" onAction="#modify" prefWidth="90.0" style="-fx-background-color: white;" text="MODIFY" />
+                  <JFXButton fx:id="deleteButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="90.0" onAction="#delete" prefWidth="90.0" style="-fx-background-color: white;" text="DELETE" />
+                  <JFXButton fx:id="cancelButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="90.0" onAction="#cancel" prefWidth="90.0" style="-fx-background-color: white;" text="CANCEL" />
+                  <JFXButton fx:id="closeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="130.0" onAction="#close" prefWidth="90.0" style="-fx-background-color: white;" text="CLOSE" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+         <JFXSnackbar fx:id="snackbar" prefWidth="500" />
+   </children>
+</AnchorPane>
